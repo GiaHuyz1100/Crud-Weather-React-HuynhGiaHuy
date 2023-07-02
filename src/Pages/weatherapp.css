@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
+@import "https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css";
+html,
+body,
+.background {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Inconsolata', monospace;
+  font-size: larger;
+  background-image: url("../img/pexels-tahir-shaw-186980.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+#card {
+  overflow: hidden;
+  width: 450px;
+  padding: 25px;
+  height: 550px;
+  min-height: 300px;
+  margin: 20px;
+  border-radius: 5px;
+  position: relative;
+}
+#card .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 20px;
+  color: #ff0000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: color 2s ease;
+}
+#card .details .right {
+  text-align: right;
+}
+#card .details #date {
+  margin: 4px 0;
+}
+#card .details #summary {
+  font-weight: 600;
+  font-size: 21px;
+  text-transform: uppercase;
+}
+#card .details .temp {
+  font-size: 60px;
+  line-height: 60px;
+}
+#card .details .temp span {
+  font-size: 31px;
+  font-weight: bold;
+  line-height: 30px;
+  vertical-align: top;
+  margin-left: 5px;
+}
+.weather {
+  background-color: #dae3fd;
+  transition: background-color 2s ease;
+}
+
+/* SEARC */
+.Search {
+  position: relative;
+  font-weight: 300;
+  font-size: 40px;
+  color: #555;
+}
+
+.Search-box {
+  font-size: 20px;
+  margin: 10 12px;
+  margin-top: 6vh;
+  padding: 8px 165px;
+  height: 35px;
+  border: 0;
+  border-radius: 20px;
+  box-shadow: 0 3px 12px -1px rgba(0, 0, 0, 0.3);
+  transition: all 0.15s ease-in-out;
+}
+.Search-box:focus {
+  flex: 1 0 90%;
+  outline: 0;
+}
+.Search-box:focus + .Search-label {
+  transform: translateX(12px);
+}
+.searchbtn {
+  font-family: "Gilroy ExtraBold", system-ui, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 2px;
+  font-size: 17px;
+  background: #ac4049;
+  color: #f6f6f6;
+  appearance: none;
+  border: none;
+  border-radius: 17px;
+  margin-top: -35px;
+  height: 36px;
+  margin-left: 460px;
+  padding: 0 24px;
+  box-shadow: 0 10px 60px -13px #6b4055;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+}
+.searchbtn:hover {
+  background: #75425a;
+  box-shadow: 0 8px 65px -5px #72455c;
+}
+.searchbtn:active {
+  background: #d5bec0;
+  box-shadow: 0 10px 60px -10px #8a325e;
+  transform: perspective(250px) scale3d(1, 1, 1) translateY(5%) !important;
+}
+
+.infos {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  line-height: 29px;
+  font-weight: 600;
+  color: #000000;
+  margin-top: -3vh;
+}
+.weatherimg {
+  width: 100%;
+  margin-top: -2vh;
+  margin-left: auto;
+}
+.weatherimg2 {
+  width: 30%;
+  margin-top: -2vh;
+}
+.windimg {
+  width: 14%;
+  margin-left: 7vh;
+}
+.windspeed {
+  margin-top: -43px;
+  margin-left: 13vh;
+}
+.humidityimg {
+  width: 14%;
+  margin-left: 7vh;
+  margin-bottom: 1vh;
+}
+.humidity {
+  margin-left: 13vh;
+  margin-top: -55px;
+}
+.visibility {
+  margin-top: -42px;
+  margin-left: 13vh;
+}
+.visibilityimg {
+  width: 14%;
+  margin-left: 7vh;
+}
+* {
+  box-sizing: border-box;
+}
+.bgh{
+  background: #B0B8D7;
+}
+.title {
+  font-size: 23px;
+  font-weight: 700;
+  margin: 0px;
+  padding: 10px 20px;
+}
+
+.daily-item {
+  display: flex;
+  text-transform: capitalize;
+}
+
+
+.box{
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Roboto Slab', sans-serif;
+  margin: 1em 1em auto ;
+  background: #285290;
+  padding: 2em 3px;
+  width: 204px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 7px rgba(100, 100, 100, 0.25);
+  &:hover{
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  h1{
+    font-size: 2em;
+    text-align: center;
+  }
+  .temp{
+    font-size: 7em;
+    line-height: 1;
+    text-align: center;
+    display: block;
+    padding-left: 30px;
+    margin-bottom: 24px;
+  }
+  .high{
+    font-size: 2em;
+    color: lighten(#313E48, 20%);
+    text-align: center;
+    display: block;
+    font-weight: 100;
+  }
+}
+
+

@@ -1,0 +1,77 @@
+/* .App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.AppHeader {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 20px 4px 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.AppFooter {
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+.SideMenuAndPageContent {
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.SideMenuVertical {
+  height: 100%;
+}
+.PageContent {
+  flex-basis: 1100px;
+  padding-left: 12px;
+} */
+.SideMenu {
+  letter-spacing: 1px;
+  text-align: center;
+}
+.logo {
+margin: auto;
+}
+
+table{
+  margin: auto;
+  text-align: center;
+  width: 1500px;
+}
+th, td {
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+ tr:nth-child(even){background-color: #f2f2f2;}
+
+ tr:hover {background-color: #ddd;}
+ th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #04AA6D;
+  color: white;
+}
+.hai{
+  padding: 20px;
+}
+.card{
+  margin: 10px;
+  padding: 10px;
+  font-size: medium;
+}
+.cardup{
+  margin: auto;
+  width: 1000px;
+}
+h1{
+  font-size: xx-large;
+}
