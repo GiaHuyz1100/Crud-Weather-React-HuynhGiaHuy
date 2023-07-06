@@ -12,7 +12,6 @@ const WeatherApp = () => {
   const [windspeed, setWineSpeed] = useState("");
   const [wicon, setWicon] = useState("");
   const [weatherData, setWeatherData] = useState([]);
-
   const getWeatherData = () => {
     axios({
       method: "GET",
@@ -28,7 +27,7 @@ const WeatherApp = () => {
         setWicon(response.data.weather[0].icon);
         console.log(response);
       })
-      .catch((error) => {});
+      .catch((error) => { });
   };
   const getWeatherDay = () => {
     axios({
@@ -36,9 +35,9 @@ const WeatherApp = () => {
       url: `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=e203317f0df5474c05874e35b030eda3`,
     })
       .then((response) => {
-        setWeatherData(response.data.list.slice(0, 7));
+        setWeatherData(response.data.list);
       })
-      .catch((error) => {});
+      .catch((error) => { });
   };
   return (
     <>
@@ -71,7 +70,7 @@ const WeatherApp = () => {
           <div id="card" className="weather">
             <div className="details">
               <div className="temp">
-                {temperature} 
+                {temperature}
                 <span>&deg;</span>C
               </div>
               <div className="right">
@@ -117,9 +116,9 @@ const WeatherApp = () => {
         <h1 className="title">Daily</h1>
         <div className="daily-item">
           {weatherData.map((item) => (
-            <div key={item.dt} className="horizontal-list-item">
+            <div key={item} className="horizontal-list-item">
               <article class="box weather">
-                <h1 className="day">{item.dt_txt}</h1>
+                <h1 className="day">{new Date(item.dt * 1000).toLocaleDateString()}</h1>
                 <img
                   className="weatherimg2"
                   alt="image1"
@@ -139,3 +138,4 @@ const WeatherApp = () => {
 };
 
 export default WeatherApp;
+
